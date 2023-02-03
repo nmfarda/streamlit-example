@@ -38,7 +38,7 @@ with st.echo(code_location='below'):
         .encode(x='x:Q', y='y:Q'))
 
     
-    import numpy as np
+import numpy as np
 import plotly.graph_objs as go
 
 import streamlit as st
