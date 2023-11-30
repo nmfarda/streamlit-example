@@ -120,9 +120,9 @@ def update_query_params():
 
 
 with row1_1:
-    st.title("NYC Uber Ridesharing Data")
+    st.title("Data Layanan Berbagi Tumpangan Uber di NYC")
     hour_selected = st.slider(
-        "Select hour of pickup", 0, 23, key="pickup_hour", on_change=update_query_params
+        "Pilih jam penjemputan", 0, 23, key="pickup_hour", on_change=update_query_params
     )
 
 
@@ -147,20 +147,20 @@ midpoint = mpoint(data["lat"], data["lon"])
 
 with row2_1:
     st.write(
-        f"""**All New York City from {hour_selected}:00 and {(hour_selected + 1) % 24}:00**"""
+        f"""**Semua Kota New York dari {hour_selected}:00 dan {(hour_selected + 1) % 24}:00**"""
     )
     map(filterdata(data, hour_selected), midpoint[0], midpoint[1], 11)
 
 with row2_2:
-    st.write("**La Guardia Airport**")
+    st.write("**Bandara La Guardia**")
     map(filterdata(data, hour_selected), la_guardia[0], la_guardia[1], zoom_level)
 
 with row2_3:
-    st.write("**JFK Airport**")
+    st.write("**Bandara JFK**")
     map(filterdata(data, hour_selected), jfk[0], jfk[1], zoom_level)
 
 with row2_4:
-    st.write("**Newark Airport**")
+    st.write("**Bandara Newark**")
     map(filterdata(data, hour_selected), newark[0], newark[1], zoom_level)
 
 # CALCULATING DATA FOR THE HISTOGRAM
@@ -168,7 +168,7 @@ chart_data = histdata(data, hour_selected)
 
 # LAYING OUT THE HISTOGRAM SECTION
 st.write(
-    f"""**Breakdown of rides per minute between {hour_selected}:00 and {(hour_selected + 1) % 24}:00**"""
+    f"""**Rincian perjalanan per menit antara {hour_selected}:00 dan {(hour_selected + 1) % 24}:00**"""
 )
 
 st.altair_chart(
