@@ -130,8 +130,8 @@ with row1_2:
     st.write(
         """
     ##
-    Examining how Uber pickups vary over time in New York City's and at its major regional airports.
-    By sliding the slider on the left you can view different slices of time and explore different transportation trends.
+    Menelaah bagaimana penjemputan Uber bervariasi dari waktu ke waktu di New York City dan di bandara regional utamanya.
+    Dengan menggeser penggeser di sebelah kiri, Anda dapat melihat potongan waktu yang berbeda dan menjelajahi tren transportasi yang berbeda.
     """
     )
 
